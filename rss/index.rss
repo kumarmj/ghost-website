@@ -1,16 +1,80 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Manoj Kumar</title><description>Thoughts, stories and ideas.</description><link>https://ghost-nithmanoj.c9users.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Sun, 02 Oct 2016 12:56:08 GMT</lastBuildDate><atom:link href="https://ghost-nithmanoj.c9users.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Hello 3</title><description>&lt;p&gt;My name is Manoj Kumar, I am an undergraduate at National Institute of Technology, Hamirpur studying computer science. In my spare time, I love to code, read and share laughter with friends.  &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Manoj Kumar</title><description>Thoughts, stories and ideas.</description><link>https://ghost-nithmanoj.c9users.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Mon, 14 Nov 2016 06:53:01 GMT</lastBuildDate><atom:link href="https://ghost-nithmanoj.c9users.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>HTTP Collect</title><description>&lt;h3 id="problem"&gt;Problem&lt;/h3&gt;
 
-&lt;p style="text-indent:50px;"&gt;Disqus is the web’s most popular discussion system. It's a global comment system that improves discussion on&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/hello-3/</link><guid isPermaLink="false">dd8179ea-6ee2-4c7b-9da9-f476c2bb85ee</guid><dc:creator>Manoj Kumar</dc:creator><pubDate>Sun, 02 Oct 2016 09:39:21 GMT</pubDate><content:encoded>&lt;p&gt;My name is Manoj Kumar, I am an undergraduate at National Institute of Technology, Hamirpur studying computer science. In my spare time, I love to code, read and share laughter with friends.  &lt;/p&gt;
+&lt;p&gt;Write a program that performs an HTTP GET request to a URL provided to you as the first command-line argument. Collect all data from the server (not just the first "data" event) and then write two lines to the console (stdout).  &lt;/p&gt;
 
-&lt;p style="text-indent:50px;"&gt;Disqus is the web’s most popular discussion system. It's a global comment system that improves discussion on websites and connects conversations across the web.&lt;/p&gt;</content:encoded></item><item><title>Hello 2</title><description>&lt;p&gt;My name is Manoj Kumar, I am an undergraduate at National Institute of Technology, Hamirpur studying computer science. In my spare time, I love to code, read and share laughter with friends.  &lt;/p&gt;
+&lt;p&gt;The first line you write should just be&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/http-collect-2/</link><guid isPermaLink="false">9c8a231f-eefd-4043-9aba-3e74f0fb6976</guid><dc:creator>Manoj Kumar</dc:creator><pubDate>Mon, 14 Nov 2016 06:51:56 GMT</pubDate><content:encoded>&lt;h3 id="problem"&gt;Problem&lt;/h3&gt;
 
-&lt;p style="text-indent:50px;"&gt;Disqus is the web’s most popular discussion system. It's a global comment system that improves discussion on&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/hello-2/</link><guid isPermaLink="false">5efece76-de4b-4db6-b445-966fa1f76198</guid><dc:creator>Manoj Kumar</dc:creator><pubDate>Sun, 02 Oct 2016 09:26:25 GMT</pubDate><content:encoded>&lt;p&gt;My name is Manoj Kumar, I am an undergraduate at National Institute of Technology, Hamirpur studying computer science. In my spare time, I love to code, read and share laughter with friends.  &lt;/p&gt;
+&lt;p&gt;Write a program that performs an HTTP GET request to a URL provided to you as the first command-line argument. Collect all data from the server (not just the first "data" event) and then write two lines to the console (stdout).  &lt;/p&gt;
 
-&lt;p style="text-indent:50px;"&gt;Disqus is the web’s most popular discussion system. It's a global comment system that improves discussion on websites and connects conversations across the web.&lt;/p&gt;</content:encoded></item><item><title>Hello 1</title><description>&lt;p&gt;My name is Manoj Kumar, I am an undergraduate at National Institute of Technology, Hamirpur studying computer science. In my spare time, I love to code, read and share laughter with friends.  &lt;/p&gt;
+&lt;p&gt;The first line you write should just be an integer representing the number of characters received from the server. The second line should contain the complete String of characters sent by the server. &lt;/p&gt;
 
-&lt;p style="text-indent:50px;"&gt;Disqus is the web’s most popular discussion system. It's a global comment system that improves discussion on&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/hello-1/</link><guid isPermaLink="false">18ba6b70-a1bb-4e7e-913c-7c7dfc7b9a07</guid><dc:creator>Manoj Kumar</dc:creator><pubDate>Sun, 02 Oct 2016 09:25:34 GMT</pubDate><content:encoded>&lt;p&gt;My name is Manoj Kumar, I am an undergraduate at National Institute of Technology, Hamirpur studying computer science. In my spare time, I love to code, read and share laughter with friends.  &lt;/p&gt;
+&lt;h3 id="approaches"&gt;Approaches&lt;/h3&gt;
 
-&lt;p style="text-indent:50px;"&gt;Disqus is the web’s most popular discussion system. It's a global comment system that improves discussion on websites and connects conversations across the web.&lt;/p&gt;</content:encoded></item><item><title>Welcome to Ghost</title><description>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/welcome-to-ghost/</link><guid isPermaLink="false">73e7e1c4-cd99-487c-9774-c0ada552b080</guid><category>Getting Started</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Sat, 01 Oct 2016 22:26:16 GMT</pubDate><content:encoded>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!&lt;/p&gt;
+&lt;p&gt;There are two approaches you can take to this problem:  &lt;/p&gt;
+
+&lt;h5 id="1bylogicapproach"&gt;1. By logic Approach&lt;/h5&gt;
+
+&lt;p&gt;Collect data across multiple "data" events and append the results together prior to printing the output. Use the "end" event to determine when the stream is finished and you can write the output. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;var http = require('http');
+
+var url = process.argv[2];
+
+http.get(url, function(response){
+
+    var fullData = '';
+    response.setEncoding('utf8');
+    response.on('data', function(data){
+        fullData += data;
+    });
+    response.on('end', function(){
+        console.log(fullData.length);
+        console.log(fullData);
+    });
+    response.on('error', console.error);
+}).on('error', console.error);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id="2thirdpartypackageapproach"&gt;2. Third Party Package Approach&lt;/h5&gt;
+
+&lt;p&gt;2) Use a third-party package to abstract the difficulties involved in collecting an entire stream of data. Two different packages provide a useful API for solving this problem (there are likely more!): &lt;code&gt;bl&lt;/code&gt; (Buffer List) and &lt;code&gt;concat-stream&lt;/code&gt; take your pick!  &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;$ npm install bl  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Both &lt;code&gt;bl&lt;/code&gt; and &lt;code&gt;concat-stream&lt;/code&gt; can have a stream piped in to them and they will collect the data for you. Once the stream has ended, a callback will be fired with the data:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript   "&gt;   response.pipe(bl(function (err, data) {
+     /* ... */ 
+   }))
+
+     // or  
+
+   response.pipe(concatStream(function (data) {
+        /* ... */ 
+   }))  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that you will probably need to &lt;code&gt;data.toString()&lt;/code&gt; to convert from a Buffer.  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;solution&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    var http = require('http')
+    var bl = require('bl')
+
+    http.get(process.argv[2], function (response) {
+      response.pipe(bl(function (err, data) {
+        if (err) {
+          return console.error(err)
+        }
+        data = data.toString()
+        console.log(data.length)
+        console.log(data)
+      }))
+    })
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>Welcome to Ghost</title><description>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/welcome-to-ghost/</link><guid isPermaLink="false">73e7e1c4-cd99-487c-9774-c0ada552b080</guid><category>Getting Started</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Sat, 01 Oct 2016 22:26:16 GMT</pubDate><content:encoded>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!&lt;/p&gt;
 
 &lt;h2 id="gettingstarted"&gt;Getting Started&lt;/h2&gt;
 
