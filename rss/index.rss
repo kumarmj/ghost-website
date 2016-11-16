@@ -1,4 +1,114 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Manoj Kumar</title><description>Fun Profit NodeJs Python</description><link>https://ghost-nithmanoj.c9users.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Tue, 15 Nov 2016 16:44:51 GMT</lastBuildDate><atom:link href="https://ghost-nithmanoj.c9users.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>HTTP Collect</title><description>&lt;h3 id="problem"&gt;Problem&lt;/h3&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Manoj Kumar</title><description>Fun Profit NodeJs Python</description><link>https://ghost-nithmanoj.c9users.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Wed, 16 Nov 2016 04:47:02 GMT</lastBuildDate><atom:link href="https://ghost-nithmanoj.c9users.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>JUGGLING ASYNC</title><description>&lt;p&gt;This problem is the same as the previous problem (HTTP COLLECT) in that you need to use &lt;code&gt;http.get()&lt;/code&gt;. However, this time you will be provided with three URLs as the first three command-line arguments. &lt;br&gt;
+  You must collect the complete content provided to you by each of the URLs and&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/juggling-async/</link><guid isPermaLink="false">a2d1205f-a0b9-462e-b6ce-a2621dac61fd</guid><category>nodejs</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Wed, 16 Nov 2016 04:19:18 GMT</pubDate><content:encoded>&lt;p&gt;This problem is the same as the previous problem (HTTP COLLECT) in that you need to use &lt;code&gt;http.get()&lt;/code&gt;. However, this time you will be provided with three URLs as the first three command-line arguments. &lt;br&gt;
+  You must collect the complete content provided to you by each of the URLs and print it to the console. And that also in proper sequence i.e. link 1 data first.&lt;/p&gt;
+
+&lt;h5 id="solution1withoutusinganyexternallibrary"&gt;Solution 1: Without using any external library&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;var http = require('http');  
+var bl = require('bl');  
+var results = [];  
+var count = 0;
+
+function printResults () {  
+  for (var i = 0; i &amp;lt; 3; i++) {
+    console.log(results[i]);
+  }
+}
+
+function httpGet (index) {  
+  http.get(process.argv[2 + index], function (response) {
+    response.pipe(bl(function (err, data) {
+      if (err) {
+        return console.error(err);
+      }
+
+      results[index] = data.toString()
+      count++
+
+      if (count === 3) {
+        printResults();
+      }
+    }));
+  });
+}
+
+for (var i = 0; i &amp;lt; 3; i++) {  
+  httpGet(i);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id="solution2usingasynclibrary"&gt;Solution 2: Using &lt;code&gt;async&lt;/code&gt; library&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;var http = require('http');  
+var bl = require('bl');  
+var async = require('async');
+
+var URLs = [process.argv[2], process.argv[3], process.argv[4]];
+
+async.map(URLs, function(url, callback) {
+
+    http.get(url, function (response) {
+
+      response.pipe(bl(function (err, data) {
+        if (err) {
+          return console.error(err);
+        }
+        callback(null, data.toString());
+      }));
+
+    });
+
+
+}, function(err, results) {
+  for(var i = 0; i &amp;lt; results.length; i++)
+    console.log(results[i]);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id="solution3usingafterlibrary"&gt;Solution 3: Using &lt;code&gt;after&lt;/code&gt; library&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;var http = require('http');  
+var bl = require('bl');  
+var after = require('after');  
+var url = [process.argv[2], process.argv[3], process.argv[4]];  
+var results = ["", "", ""];  
+var next = after(3, printData);
+
+http.get(url[0], function (response) {  
+      response.pipe(bl(function (err, data) {
+        if (err) {
+          return console.error(err);
+        }
+        results[0] = data.toString();
+        next();
+      }));
+});
+http.get(url[1], function (response) {
+
+      response.pipe(bl(function (err, data) {
+        if (err) {
+          return console.error(err);
+        }
+        results[1] = data.toString();
+        next();
+      }));
+});
+http.get(url[2], function (response) {
+
+      response.pipe(bl(function (err, data) {
+        if (err) {
+          return console.error(err);
+        }
+        results[2] = data.toString();
+        next();
+      }));
+});
+
+function printData(){  
+  for(var i = 0; i &amp;lt; results.length; i++)
+    console.log(results[i]);
+}
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>HTTP Collect</title><description>&lt;h3 id="problem"&gt;Problem&lt;/h3&gt;
 
 &lt;p&gt;Write a program that performs an HTTP GET request to a URL provided to you as the first command-line argument. Collect all data from the server (not just the first "data" event) and then write two lines to the console (stdout).  &lt;/p&gt;
 
