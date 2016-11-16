@@ -1,4 +1,111 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Manoj Kumar</title><description>Fun Profit NodeJs Python</description><link>https://ghost-nithmanoj.c9users.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Wed, 16 Nov 2016 04:47:02 GMT</lastBuildDate><atom:link href="https://ghost-nithmanoj.c9users.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>JUGGLING ASYNC</title><description>&lt;p&gt;This problem is the same as the previous problem (HTTP COLLECT) in that you need to use &lt;code&gt;http.get()&lt;/code&gt;. However, this time you will be provided with three URLs as the first three command-line arguments. &lt;br&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Manoj Kumar</title><description>Fun Profit NodeJs Python</description><link>https://ghost-nithmanoj.c9users.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Wed, 16 Nov 2016 16:15:39 GMT</lastBuildDate><atom:link href="https://ghost-nithmanoj.c9users.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>HTTP JSON API Server</title><description>&lt;p&gt;An HTTP server that serves JSON data when it receives a GET request to the path '/api/parsetime'. Expect the request to contain a query string with a key 'iso' and an ISO-format time as the value. &lt;br&gt;
+e.g. &lt;code&gt;/api/parsetime?iso=2013-08-10T12:10:15.474Z&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;JSON response should&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/http-json-api-server/</link><guid isPermaLink="false">f20a59d8-9c25-4069-a061-8c8af3c5de5e</guid><category>nodejs</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Wed, 16 Nov 2016 16:13:36 GMT</pubDate><content:encoded>&lt;p&gt;An HTTP server that serves JSON data when it receives a GET request to the path '/api/parsetime'. Expect the request to contain a query string with a key 'iso' and an ISO-format time as the value. &lt;br&gt;
+e.g. &lt;code&gt;/api/parsetime?iso=2013-08-10T12:10:15.474Z&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;JSON response should contain only &lt;mark&gt;hour&lt;/mark&gt;, &lt;mark&gt;minute&lt;/mark&gt; and &lt;mark&gt;second&lt;/mark&gt; properties. For example:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; {  
+   "hour": 14,  
+   "minute": 23,  
+   "second": 15  
+ }  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Add second endpoint for the path '/api/unixtime' which accepts the same query string but returns UNIX epoch time in milliseconds (the number of milliseconds since 1 Jan 1970 00:00:00 UTC) under the property 'unixtime'. &lt;br&gt;
+For example:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; { "unixtime": 1376136615474 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Server listens to port provided as second argument.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;var http = require('http');  
+var url = require('url');
+
+var server = http.createServer(function(req, res){
+
+    var urlObj = url.parse(req.url, true);
+    var time = new Date(urlObj.query.iso);
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+
+    if(urlObj.pathname == '/api/parsetime'){
+      res.end(JSON.stringify({
+        'hour':Number(time.getHours()),
+        'minute':Number(time.getMinutes()),
+        'second':Number(time.getSeconds())}));
+    }else{
+      res.end(JSON.stringify( {unixtime: time.getTime()} ));
+    }
+});
+server.listen(process.argv[2]);  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;What do you think about post? Share your thoughts in the comments below!&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr&gt;</content:encoded></item><item><title>NodeJs server</title><description>&lt;p&gt;TCP time server, server should listen to TCP connections on the port provided by the first argument of program. For each connection write the current date &amp;amp; 24 hour time in format &lt;code&gt;YYYY-MM-DD hh:mm&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id="timeserver"&gt;Time Server&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;var net = require('net');  
+var strftime = require('strftime');
+
+var server = net.createServer(function&lt;/code&gt;&lt;/pre&gt;</description><link>https://ghost-nithmanoj.c9users.io/untitled/</link><guid isPermaLink="false">d4d1e740-5f4e-422e-aabf-53dff6c2b251</guid><category>nodejs</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Wed, 16 Nov 2016 15:54:52 GMT</pubDate><content:encoded>&lt;p&gt;TCP time server, server should listen to TCP connections on the port provided by the first argument of program. For each connection write the current date &amp;amp; 24 hour time in format &lt;code&gt;YYYY-MM-DD hh:mm&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id="timeserver"&gt;Time Server&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;var net = require('net');  
+var strftime = require('strftime');
+
+var server = net.createServer(function (socket){  
+  socket.write(strftime('%F %H:%M\n'));
+  socket.end();
+});
+
+server.listen(process.argv[2]);  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;  &lt;/p&gt;
+
+&lt;h4 id="fileserver"&gt;File Server&lt;/h4&gt;
+
+&lt;p&gt;HTTP server that serves the same text file for each request it receives.  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;var http = require('http');  
+var fs = require('fs');
+
+console.log(process.argv[2]);  
+console.log(process.argv[3]);
+
+var server = http.createServer(function(req, res){  
+  fs.createReadStream(process.argv[3]).pipe(res);
+});
+server.listen(process.argv[2]);  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;  &lt;/p&gt;
+
+&lt;h4 id="uppercaserer"&gt;Upper Caserer&lt;/h4&gt;
+
+&lt;p&gt;HTTP server that receives only POST requests and converts incoming POST body characters to upper-case and returns it to the client.  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;var http = require('http');  
+var map = require('through2-map');
+
+var server = http.createServer(function(req, res){
+
+     req.pipe(map(function (chunk) {  
+       return chunk.toString().toUpperCase();  
+     })).pipe(res)
+});
+
+server.listen(process.argv[2]);  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;What do you think about post? Share your thoughts in the comments below!&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr&gt;</content:encoded></item><item><title>JUGGLING ASYNC</title><description>&lt;p&gt;This problem is the same as the previous problem (HTTP COLLECT) in that you need to use &lt;code&gt;http.get()&lt;/code&gt;. However, this time you will be provided with three URLs as the first three command-line arguments. &lt;br&gt;
   You must collect the complete content provided to you by each of the URLs and&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/juggling-async/</link><guid isPermaLink="false">a2d1205f-a0b9-462e-b6ce-a2621dac61fd</guid><category>nodejs</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Wed, 16 Nov 2016 04:19:18 GMT</pubDate><content:encoded>&lt;p&gt;This problem is the same as the previous problem (HTTP COLLECT) in that you need to use &lt;code&gt;http.get()&lt;/code&gt;. However, this time you will be provided with three URLs as the first three command-line arguments. &lt;br&gt;
   You must collect the complete content provided to you by each of the URLs and print it to the console. And that also in proper sequence i.e. link 1 data first.&lt;/p&gt;
 
@@ -37,6 +144,8 @@ for (var i = 0; i &amp;lt; 3; i++) {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;&lt;br&gt;  &lt;/p&gt;
+
 &lt;h5 id="solution2usingasynclibrary"&gt;Solution 2: Using &lt;code&gt;async&lt;/code&gt; library&lt;/h5&gt;
 
 &lt;pre&gt;&lt;code class="language-javascript"&gt;var http = require('http');  
@@ -64,6 +173,8 @@ async.map(URLs, function(url, callback) {
     console.log(results[i]);
 });
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;  &lt;/p&gt;
 
 &lt;h5 id="solution3usingafterlibrary"&gt;Solution 3: Using &lt;code&gt;after&lt;/code&gt; library&lt;/h5&gt;
 
@@ -108,7 +219,11 @@ function printData(){
   for(var i = 0; i &amp;lt; results.length; i++)
     console.log(results[i]);
 }
-&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>HTTP Collect</title><description>&lt;h3 id="problem"&gt;Problem&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;What do you think about post? Share your thoughts in the comments below!&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr&gt;</content:encoded></item><item><title>HTTP Collect</title><description>&lt;h3 id="problem"&gt;Problem&lt;/h3&gt;
 
 &lt;p&gt;Write a program that performs an HTTP GET request to a URL provided to you as the first command-line argument. Collect all data from the server (not just the first "data" event) and then write two lines to the console (stdout).  &lt;/p&gt;
 
@@ -144,6 +259,8 @@ http.get(url, function(response){
     response.on('error', console.error);
 }).on('error', console.error);
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;  &lt;/p&gt;
 
 &lt;h5 id="2thirdpartypackageapproach"&gt;2. Third Party Package Approach&lt;/h5&gt;
 
@@ -184,7 +301,11 @@ http.get(url, function(response){
         console.log(data)
       }))
     })
-&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>Welcome to Ghost</title><description>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/welcome-to-ghost/</link><guid isPermaLink="false">73e7e1c4-cd99-487c-9774-c0ada552b080</guid><category>Getting Started</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Sat, 01 Oct 2016 22:26:16 GMT</pubDate><content:encoded>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;What do you think about post? Share your thoughts in the comments below!&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr&gt;</content:encoded></item><item><title>Welcome to Ghost</title><description>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/welcome-to-ghost/</link><guid isPermaLink="false">73e7e1c4-cd99-487c-9774-c0ada552b080</guid><category>Getting Started</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Sat, 01 Oct 2016 22:26:16 GMT</pubDate><content:encoded>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!&lt;/p&gt;
 
 &lt;h2 id="gettingstarted"&gt;Getting Started&lt;/h2&gt;
 

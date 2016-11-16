@@ -9,11 +9,11 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="../assets/favicon2.ico?v=b49d1cff05">
+    <link rel="shortcut icon" href="../assets/favicon2.ico?v=f0c99a8148">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=b49d1cff05">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=f0c99a8148">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=b49d1cff05"> 
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=f0c99a8148"> 
 
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -25,7 +25,7 @@
     <meta property="og:description" content="This problem is the same as the previous problem (HTTP COLLECT) in that you need to use http.get(). However, this time you will be provided with three URLs as the first three command-line arguments.    You must collect the complete content provided to you by each of the URLs and">
     <meta property="og:url" content="https://ghost-nithmanoj.c9users.io/juggling-async/">
     <meta property="article:published_time" content="2016-11-16T04:19:18.000Z">
-    <meta property="article:modified_time" content="2016-11-16T04:46:27.000Z">
+    <meta property="article:modified_time" content="2016-11-16T16:06:19.000Z">
     <meta property="article:tag" content="nodejs">
     
     <meta property="article:publisher" content="https://www.facebook.com/owsmmj">
@@ -63,7 +63,7 @@
     "headline": "JUGGLING ASYNC",
     "url": "https://ghost-nithmanoj.c9users.io/juggling-async/",
     "datePublished": "2016-11-16T04:19:18.000Z",
-    "dateModified": "2016-11-16T04:46:27.000Z",
+    "dateModified": "2016-11-16T16:06:19.000Z",
     "keywords": "nodejs",
     "description": "This problem is the same as the previous problem (HTTP COLLECT) in that you need to use http.get(). However, this time you will be provided with three URLs as the first three command-line arguments.    You must collect the complete content provided to you by each of the URLs and",
     "mainEntityOfPage": {
@@ -153,6 +153,8 @@ for (var i = 0; i &lt; 3; i++) {
 }
 </code></pre>
 
+<p><br>  </p>
+
 <h5 id="solution2usingasynclibrary">Solution 2: Using <code>async</code> library</h5>
 
 <pre><code class="language-javascript">var http = require('http');  
@@ -180,6 +182,8 @@ async.map(URLs, function(url, callback) {
     console.log(results[i]);
 });
 </code></pre>
+
+<p><br>  </p>
 
 <h5 id="solution3usingafterlibrary">Solution 3: Using <code>after</code> library</h5>
 
@@ -225,6 +229,10 @@ function printData(){
     console.log(results[i]);
 }
 </code></pre>
+
+<p><em>What do you think about post? Share your thoughts in the comments below!</em></p>
+
+<hr>
         </section>
 
         <footer class="post-footer">
@@ -298,7 +306,7 @@ var disqus_config = function () {
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=b49d1cff05"></script>
-    <script type="text/javascript" src="../assets/js/index.js?v=b49d1cff05"></script>
-    <script type="text/javascript" src="../assets/js/prism.js?v=b49d1cff05"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=f0c99a8148"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=f0c99a8148"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=f0c99a8148"></script>
 </body>

@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>JUGGLING ASYNC</title>
+    <title>NodeJs server</title>
     <meta name="description" content="">
 
     <meta name="HandheldFriendly" content="True">
@@ -15,18 +15,18 @@
     
     <meta property="og:site_name" content="Manoj Kumar">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="JUGGLING ASYNC">
-    <meta property="og:description" content="This problem is the same as the previous problem (HTTP COLLECT) in that you need to use http.get(). However, this time you will be provided with three URLs as the first three command-line arguments.    You must collect the complete content provided to you by each of the URLs and">
-    <meta property="og:url" content="https://ghost-nithmanoj.c9users.io/juggling-async/">
-    <meta property="article:published_time" content="2016-11-16T04:19:18.000Z">
-    <meta property="article:modified_time" content="2016-11-16T16:06:19.000Z">
+    <meta property="og:title" content="NodeJs server">
+    <meta property="og:description" content="TCP time server, server should listen to TCP connections on the port provided by the first argument of program. For each connection write the current date &amp;amp; 24 hour time in format YYYY-MM-DD hh:mm Time Server var net = require('net');   var strftime = require('strftime'); var server = net.createServer(function">
+    <meta property="og:url" content="https://ghost-nithmanoj.c9users.io/untitled/">
+    <meta property="article:published_time" content="2016-11-16T15:54:52.000Z">
+    <meta property="article:modified_time" content="2016-11-16T16:04:19.000Z">
     <meta property="article:tag" content="nodejs">
     
     <meta property="article:publisher" content="https://www.facebook.com/owsmmj">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="JUGGLING ASYNC">
-    <meta name="twitter:description" content="This problem is the same as the previous problem (HTTP COLLECT) in that you need to use http.get(). However, this time you will be provided with three URLs as the first three command-line arguments.    You must collect the complete content provided to you by each of the URLs and">
-    <meta name="twitter:url" content="https://ghost-nithmanoj.c9users.io/juggling-async/">
+    <meta name="twitter:title" content="NodeJs server">
+    <meta name="twitter:description" content="TCP time server, server should listen to TCP connections on the port provided by the first argument of program. For each connection write the current date &amp;amp; 24 hour time in format YYYY-MM-DD hh:mm Time Server var net = require('net');   var strftime = require('strftime'); var server = net.createServer(function">
+    <meta name="twitter:url" content="https://ghost-nithmanoj.c9users.io/untitled/">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Manoj Kumar">
     <meta name="twitter:label2" content="Filed under">
@@ -54,12 +54,12 @@
         "url": "https://ghost-nithmanoj.c9users.io/author/manoj/",
         "sameAs": []
     },
-    "headline": "JUGGLING ASYNC",
-    "url": "https://ghost-nithmanoj.c9users.io/juggling-async/",
-    "datePublished": "2016-11-16T04:19:18.000Z",
-    "dateModified": "2016-11-16T16:06:19.000Z",
+    "headline": "NodeJs server",
+    "url": "https://ghost-nithmanoj.c9users.io/untitled/",
+    "datePublished": "2016-11-16T15:54:52.000Z",
+    "dateModified": "2016-11-16T16:04:19.000Z",
     "keywords": "nodejs",
-    "description": "This problem is the same as the previous problem (HTTP COLLECT) in that you need to use http.get(). However, this time you will be provided with three URLs as the first three command-line arguments.    You must collect the complete content provided to you by each of the URLs and",
+    "description": "TCP time server, server should listen to TCP connections on the port provided by the first argument of program. For each connection write the current date &amp;amp; 24 hour time in format YYYY-MM-DD hh:mm Time Server var net &#x3D; require(&#x27;net&#x27;);   var strftime &#x3D; require(&#x27;strftime&#x27;); var server &#x3D; net.createServer(function",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://ghost-nithmanoj.c9users.io"
@@ -852,7 +852,7 @@
         <article class="post">
 
             <header class="post-header">
-                <h1 class="post-title">JUGGLING ASYNC</h1>
+                <h1 class="post-title">NodeJs server</h1>
                 <section class="post-meta">
                     <p class="author">by <a href="../../author/manoj/">Manoj Kumar</a></p>
                     <time class="post-date" datetime="2016-11-16">2016-11-16</time>
@@ -860,119 +860,56 @@
             </header>
             <section class="post-content">
 
-                <p>This problem is the same as the previous problem (HTTP COLLECT) in that you need to use <code>http.get()</code>. However, this time you will be provided with three URLs as the first three command-line arguments. <br>
-  You must collect the complete content provided to you by each of the URLs and print it to the console. And that also in proper sequence i.e. link 1 data first.</p>
+                <p>TCP time server, server should listen to TCP connections on the port provided by the first argument of program. For each connection write the current date &amp; 24 hour time in format <code>YYYY-MM-DD hh:mm</code></p>
 
-<h5 id="solution1withoutusinganyexternallibrary">Solution 1: Without using any external library</h5>
+<h4 id="timeserver">Time Server</h4>
 
-<pre><code class="language-javascript">var http = require('http');  
-var bl = require('bl');  
-var results = [];  
-var count = 0;
+<pre><code class="language-javascript">var net = require('net');  
+var strftime = require('strftime');
 
-function printResults () {  
-  for (var i = 0; i &lt; 3; i++) {
-    console.log(results[i]);
-  }
-}
+var server = net.createServer(function (socket){  
+  socket.write(strftime('%F %H:%M\n'));
+  socket.end();
+});
 
-function httpGet (index) {  
-  http.get(process.argv[2 + index], function (response) {
-    response.pipe(bl(function (err, data) {
-      if (err) {
-        return console.error(err);
-      }
-
-      results[index] = data.toString()
-      count++
-
-      if (count === 3) {
-        printResults();
-      }
-    }));
-  });
-}
-
-for (var i = 0; i &lt; 3; i++) {  
-  httpGet(i);
-}
+server.listen(process.argv[2]);  
 </code></pre>
 
 <p><br>  </p>
 
-<h5 id="solution2usingasynclibrary">Solution 2: Using <code>async</code> library</h5>
+<h4 id="fileserver">File Server</h4>
+
+<p>HTTP server that serves the same text file for each request it receives.  </p>
 
 <pre><code class="language-javascript">var http = require('http');  
-var bl = require('bl');  
-var async = require('async');
+var fs = require('fs');
 
-var URLs = [process.argv[2], process.argv[3], process.argv[4]];
+console.log(process.argv[2]);  
+console.log(process.argv[3]);
 
-async.map(URLs, function(url, callback) {
-
-    http.get(url, function (response) {
-
-      response.pipe(bl(function (err, data) {
-        if (err) {
-          return console.error(err);
-        }
-        callback(null, data.toString());
-      }));
-
-    });
-
-
-}, function(err, results) {
-  for(var i = 0; i &lt; results.length; i++)
-    console.log(results[i]);
+var server = http.createServer(function(req, res){  
+  fs.createReadStream(process.argv[3]).pipe(res);
 });
+server.listen(process.argv[2]);  
 </code></pre>
 
 <p><br>  </p>
 
-<h5 id="solution3usingafterlibrary">Solution 3: Using <code>after</code> library</h5>
+<h4 id="uppercaserer">Upper Caserer</h4>
+
+<p>HTTP server that receives only POST requests and converts incoming POST body characters to upper-case and returns it to the client.  </p>
 
 <pre><code class="language-javascript">var http = require('http');  
-var bl = require('bl');  
-var after = require('after');  
-var url = [process.argv[2], process.argv[3], process.argv[4]];  
-var results = ["", "", ""];  
-var next = after(3, printData);
+var map = require('through2-map');
 
-http.get(url[0], function (response) {  
-      response.pipe(bl(function (err, data) {
-        if (err) {
-          return console.error(err);
-        }
-        results[0] = data.toString();
-        next();
-      }));
-});
-http.get(url[1], function (response) {
+var server = http.createServer(function(req, res){
 
-      response.pipe(bl(function (err, data) {
-        if (err) {
-          return console.error(err);
-        }
-        results[1] = data.toString();
-        next();
-      }));
-});
-http.get(url[2], function (response) {
-
-      response.pipe(bl(function (err, data) {
-        if (err) {
-          return console.error(err);
-        }
-        results[2] = data.toString();
-        next();
-      }));
+     req.pipe(map(function (chunk) {  
+       return chunk.toString().toUpperCase();  
+     })).pipe(res)
 });
 
-function printData(){  
-  for(var i = 0; i &lt; results.length; i++)
-    console.log(results[i]);
-}
+server.listen(process.argv[2]);  
 </code></pre>
 
 <p><em>What do you think about post? Share your thoughts in the comments below!</em></p>

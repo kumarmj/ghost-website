@@ -19,7 +19,7 @@
     <meta property="og:description" content='Problem Write a program that performs an HTTP GET request to a URL provided to you as the first command-line argument. Collect all data from the server (not just the first "data" event) and then write two lines to the console (stdout).   The first line you write should just be'>
     <meta property="og:url" content="https://ghost-nithmanoj.c9users.io/http-collect/">
     <meta property="article:published_time" content="2016-11-14T06:51:56.000Z">
-    <meta property="article:modified_time" content="2016-11-14T10:03:22.000Z">
+    <meta property="article:modified_time" content="2016-11-16T16:07:15.000Z">
     <meta property="article:tag" content="nodejs">
     
     <meta property="article:publisher" content="https://www.facebook.com/owsmmj">
@@ -57,7 +57,7 @@
     "headline": "HTTP Collect",
     "url": "https://ghost-nithmanoj.c9users.io/http-collect/",
     "datePublished": "2016-11-14T06:51:56.000Z",
-    "dateModified": "2016-11-14T10:03:22.000Z",
+    "dateModified": "2016-11-16T16:07:15.000Z",
     "keywords": "nodejs",
     "description": "Problem Write a program that performs an HTTP GET request to a URL provided to you as the first command-line argument. Collect all data from the server (not just the first &quot;data&quot; event) and then write two lines to the console (stdout).   The first line you write should just be",
     "mainEntityOfPage": {
@@ -893,6 +893,8 @@ http.get(url, function(response){
 }).on('error', console.error);
 </code></pre>
 
+<p><br>  </p>
+
 <h5 id="2thirdpartypackageapproach">2. Third Party Package Approach</h5>
 
 <p>2) Use a third-party package to abstract the difficulties involved in collecting an entire stream of data. Two different packages provide a useful API for solving this problem (there are likely more!): <code>bl</code> (Buffer List) and <code>concat-stream</code> take your pick!  </p>
@@ -933,6 +935,10 @@ http.get(url, function(response){
       }))
     })
 </code></pre>
+
+<p><em>What do you think about post? Share your thoughts in the comments below!</em></p>
+
+<hr>
 
             </section>
 
