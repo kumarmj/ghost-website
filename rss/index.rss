@@ -1,4 +1,94 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Manoj Kumar</title><description>Fun Profit NodeJs Python</description><link>https://ghost-nithmanoj.c9users.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Wed, 16 Nov 2016 16:15:39 GMT</lastBuildDate><atom:link href="https://ghost-nithmanoj.c9users.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>HTTP JSON API Server</title><description>&lt;p&gt;An HTTP server that serves JSON data when it receives a GET request to the path '/api/parsetime'. Expect the request to contain a query string with a key 'iso' and an ISO-format time as the value. &lt;br&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Manoj Kumar</title><description>Fun Profit NodeJs Python</description><link>https://ghost-nithmanoj.c9users.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 17 Nov 2016 05:48:46 GMT</lastBuildDate><atom:link href="https://ghost-nithmanoj.c9users.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Scopes</title><description>&lt;p&gt;The main type of scope in Javascript is Lexical Scoping. Present in the language from the very beginning, this is the scope created within a function, and the one most developers are familiar with. &lt;br&gt;
+ES6 recently defined Block Scoping. This scope is created within curly braced blocks.&lt;/p&gt;
+
+&lt;h2 id="intializingvariables"&gt;Intializing Variables&lt;/h2&gt;
+
+&lt;p&gt;The&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/scopes/</link><guid isPermaLink="false">0107f13c-833b-4cd5-a63a-149d548cc43b</guid><category>nodejs</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Thu, 17 Nov 2016 02:45:16 GMT</pubDate><content:encoded>&lt;p&gt;The main type of scope in Javascript is Lexical Scoping. Present in the language from the very beginning, this is the scope created within a function, and the one most developers are familiar with. &lt;br&gt;
+ES6 recently defined Block Scoping. This scope is created within curly braced blocks.&lt;/p&gt;
+
+&lt;h2 id="intializingvariables"&gt;Intializing Variables&lt;/h2&gt;
+
+&lt;p&gt;The way a variable is initialized determines which scope type it is:&lt;/p&gt;
+
+&lt;h3 id="lexicalscope"&gt;Lexical Scope&lt;/h3&gt;
+
+&lt;p&gt;var is used to denote a variable which is Lexically Scoped to the current &lt;br&gt;
+function:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;    function someFunc() {
+      var aVariable;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aVariable is lexically scoped within someFunc&lt;/p&gt;
+
+&lt;h3 id="blockscope"&gt;Block Scope&lt;/h3&gt;
+
+&lt;p&gt;let &amp;amp; const are used to denote variables which are Block Scoped to the &lt;br&gt;
+current curly braced block:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;    if (true) {
+      let aVariable;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aVariable is block scoped within the if's curly braces&lt;/p&gt;
+
+&lt;h3 id="nestedscope"&gt;Nested Scope&lt;/h3&gt;
+
+&lt;p&gt;Each nested inner scope has access to outer scope variables, but NOT vice-versa.  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;function someFunc() {  
+   var outerVar = 1;
+   function inner() {
+     var innerVar = 2;
+   }
+ }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;inner has access to both &lt;em&gt;innerVar&lt;/em&gt; &amp;amp; &lt;em&gt;outerVar&lt;/em&gt;, but &lt;em&gt;someFunc&lt;/em&gt; only has access to &lt;em&gt;outerVar&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id="globalscope"&gt;Global Scope&lt;/h3&gt;
+
+&lt;p&gt;When assigning a variable without using either of var, let, etc, the variable is assumed to exist in an outer scope.  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;    function someFunc() {
+       var scopedVar = 1;
+       function inner() {
+          foo = 2;
+       }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Searches the outer scope until the &lt;em&gt;Global Scope&lt;/em&gt; is reached and if not found on global scope create it on window object(global scope).&lt;/p&gt;
+
+&lt;h3 id="shadowing"&gt;Shadowing&lt;/h3&gt;
+
+&lt;p&gt;It is perfectly valid to define two different variables, in different scopes, with the same name:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;    function someFunc() {
+       var foo = 1;
+    }
+    function anotherFunc() {
+       var foo = 2;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It is also valid to do this in nested scopes:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;    function someFunc() {
+       var foo = 1;
+       function inner() {
+          var foo = 2;
+       }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is called Shadowing. The foo inside inner() is said to Shadow the foo inside someFunc.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;What do you think about post? Share your thoughts in the comments below!&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr&gt;</content:encoded></item><item><title>HTTP JSON API Server</title><description>&lt;p&gt;An HTTP server that serves JSON data when it receives a GET request to the path '/api/parsetime'. Expect the request to contain a query string with a key 'iso' and an ISO-format time as the value. &lt;br&gt;
 e.g. &lt;code&gt;/api/parsetime?iso=2013-08-10T12:10:15.474Z&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;JSON response should&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/http-json-api-server/</link><guid isPermaLink="false">f20a59d8-9c25-4069-a061-8c8af3c5de5e</guid><category>nodejs</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Wed, 16 Nov 2016 16:13:36 GMT</pubDate><content:encoded>&lt;p&gt;An HTTP server that serves JSON data when it receives a GET request to the path '/api/parsetime'. Expect the request to contain a query string with a key 'iso' and an ISO-format time as the value. &lt;br&gt;
