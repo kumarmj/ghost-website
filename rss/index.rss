@@ -1,4 +1,36 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Manoj Kumar</title><description>Fun Profit NodeJs Python</description><link>https://ghost-nithmanoj.c9users.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 17 Nov 2016 08:03:23 GMT</lastBuildDate><atom:link href="https://ghost-nithmanoj.c9users.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Scopes</title><description>&lt;p&gt;The main type of scope in Javascript is Lexical Scoping. Present in the language from the very beginning, this is the scope created within a function, and the one most developers are familiar with. &lt;br&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Manoj Kumar</title><description>Fun Profit NodeJs Python</description><link>https://ghost-nithmanoj.c9users.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Fri, 25 Nov 2016 11:17:28 GMT</lastBuildDate><atom:link href="https://ghost-nithmanoj.c9users.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Startup Expert</title><description>&lt;p&gt;Like many people, I was not sure whether there are cut out to start our own business. After reading the Start-up Expert's first book 'Get Ready' I have a better understanding of the challenges ahead and whether I have the character and determination to succeed.&lt;/p&gt;
+
+&lt;h4 id="mynotes"&gt;My Notes&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Alistair Milne&lt;/em&gt;&lt;/strong&gt; very&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/startup-expert/</link><guid isPermaLink="false">e080b087-a5d4-4e8a-bf93-799971f213e5</guid><category>startup</category><category>Entrepreneurship</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Fri, 25 Nov 2016 11:01:29 GMT</pubDate><media:content url="https://ghost-nithmanoj.c9users.io/content/images/2016/11/eCorner_Education2-min.jpg" medium="image"/><content:encoded>&lt;img src="https://ghost-nithmanoj.c9users.io/content/images/2016/11/eCorner_Education2-min.jpg" alt="Startup Expert"&gt;&lt;p&gt;Like many people, I was not sure whether there are cut out to start our own business. After reading the Start-up Expert's first book 'Get Ready' I have a better understanding of the challenges ahead and whether I have the character and determination to succeed.&lt;/p&gt;
+
+&lt;h4 id="mynotes"&gt;My Notes&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Alistair Milne&lt;/em&gt;&lt;/strong&gt; very creatively put example of trial and error and childhood learning and fearing to fail later.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Entrepreneurship is about conquering fears, ignoring people who may doubt you and being able to constantly adapt and refine your strategy and approach.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Small line which motivates to put dedication  &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Your playing small does not serve the world. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id="theywantyoutofail"&gt;'&lt;strong&gt;They want you to fail&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Author very beautifully explains that most people want you to fail, to risk free boring work life, rather than trial and error with lots of success and failures startup life. &lt;br&gt;
+&lt;center&gt;  &lt;/center&gt;&lt;/p&gt;
+
+&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;reading startup expert - &amp;quot;Entrepreneurs innovate generate wealth, create employment.. often risking their own financial security.&amp;quot;&lt;/p&gt;&amp;mdash; Manoj kumar (@owsmmj) &lt;a href="https://twitter.com/owsmmj/status/802065755604815872"&gt;November 25, 2016&lt;/a&gt;&lt;/blockquote&gt;  
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;  
+
+&lt;p&gt; &lt;br&gt;
+After all when it is so much good for society and for our own pursuit of happiness why not startup ?&lt;/p&gt;
+
+&lt;p&gt;What do you think about post? Share your thoughts in the comments below!&lt;/p&gt;</content:encoded></item><item><title>Scopes</title><description>&lt;p&gt;The main type of scope in Javascript is Lexical Scoping. Present in the language from the very beginning, this is the scope created within a function, and the one most developers are familiar with. &lt;br&gt;
 ES6 recently defined Block Scoping. This scope is created within curly braced blocks.&lt;/p&gt;
 
 &lt;h2 id="intializingvariables"&gt;Intializing Variables&lt;/h2&gt;
