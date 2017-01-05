@@ -1,4 +1,300 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Manoj Kumar</title><description>Fun Profit &amp; Web</description><link>https://ghost-nithmanoj.c9users.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Tue, 27 Dec 2016 06:20:18 GMT</lastBuildDate><atom:link href="https://ghost-nithmanoj.c9users.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Winuall Intern part 2</title><description>&lt;p&gt;I'll discuss part of my work I am serving as Backend Web Developer. In last post I discussed some of the common techniques that I became familiar with backend designing. Winuall is designing an e-commerce platform with laravel as backend and Angular 2 as front end. I happen to build&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/winuall-intern-part-2/</link><guid isPermaLink="false">eabaca15-d488-45a2-8eb2-487a284ff99e</guid><category>winuall</category><category>intern</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Tue, 27 Dec 2016 06:10:58 GMT</pubDate><content:encoded>&lt;p&gt;I'll discuss part of my work I am serving as Backend Web Developer. In last post I discussed some of the common techniques that I became familiar with backend designing. Winuall is designing an e-commerce platform with laravel as backend and Angular 2 as front end. I happen to build for them &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Manoj Kumar</title><description>Fun Profit &amp; Web</description><link>https://ghost-nithmanoj.c9users.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 05 Jan 2017 02:27:49 GMT</lastBuildDate><atom:link href="https://ghost-nithmanoj.c9users.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Configuring grunt tasks</title><description>Gruntfile is JavaScript, you're not limited to JSON, you may use any valid JavaScript. You may even programmatically generate the configuration if necessary</description><link>https://ghost-nithmanoj.c9users.io/configuring-grunt-tasks/</link><guid isPermaLink="false">d94ee6d8-8898-4da4-af76-b2c61e1e2965</guid><category>Grunt</category><category>JavaScript</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Wed, 04 Jan 2017 13:50:06 GMT</pubDate><content:encoded>&lt;p&gt;Task configuration is specified in your &lt;code&gt;Gruntfile&lt;/code&gt; via the &lt;code&gt;grunt.initConfig&lt;/code&gt; method. As long as properties don't conflict with properties your tasks require, they will be otherwise ignored. Also, because this is JavaScript, you're not limited to JSON; you may use any valid JavaScript here. You may even programmatically generate the configuration if necessary.&lt;/p&gt;
+
+&lt;h3 id="targets"&gt;Targets&lt;/h3&gt;
+
+&lt;p&gt;When a task is run, Grunt looks for its configuration under a property of the same name. Multi-tasks can have multiple configurations, defined using arbitrarily named "targets." In the example below, the &lt;code&gt;concat&lt;/code&gt; task has &lt;code&gt;foo&lt;/code&gt; and &lt;code&gt;bar&lt;/code&gt; targets, while the &lt;code&gt;uglify&lt;/code&gt; task only has a &lt;code&gt;bar&lt;/code&gt; target.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;grunt.initConfig({  
+  concat: {
+    foo: {
+      // concat task "foo" target options and files go here.
+    },
+    bar: {
+      // concat task "bar" target options and files go here.
+    },
+  },
+  uglify: {
+    bar: {
+      // uglify task "bar" target options and files go here.
+    },
+  },
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Specifying both a task and target like grunt &lt;code&gt;concat:foo&lt;/code&gt; or grunt &lt;code&gt;concat:bar&lt;/code&gt; will process just the specified target's configuration, while running grunt &lt;code&gt;concat&lt;/code&gt; will iterate over all targets, processing each in turn.&lt;/p&gt;
+
+&lt;h3 id="options"&gt;Options&lt;/h3&gt;
+
+&lt;p&gt;Inside a task configuration, an &lt;code&gt;options&lt;/code&gt; property may be specified to override built-in defaults. In addition, each target may have an &lt;code&gt;options&lt;/code&gt; property which is specific to that target. Target-level options will override task-level options.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;options&lt;/code&gt; object is optional and may be omitted if not needed.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;grunt.initConfig({  
+  concat: {
+    options: {
+      // Task-level options may go here, overriding task defaults.
+    },
+    foo: {
+      options: {
+        // "foo" target options may go here, overriding task-level options.
+      },
+    },
+    bar: {
+      // No options specified; this target will use task-level options.
+    },
+  },
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What you think about post let me know below in comments !&lt;/p&gt;</content:encoded></item><item><title>Testing JavaScript</title><description>The very short guide to using Travis CI with your GitHub hosted code repository. </description><link>https://ghost-nithmanoj.c9users.io/getting-started/</link><guid isPermaLink="false">84434517-b43e-474a-80b9-8fa0f7bb6244</guid><category>Github</category><category>Travis</category><category>Grunt</category><category>NPM</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Wed, 04 Jan 2017 12:21:38 GMT</pubDate><content:encoded>&lt;p&gt;It seems to be simple enough to add Travis CI in GitHub private repositories.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sign In with GitHub account&lt;/li&gt;
+&lt;li&gt;Go to Profile page &amp;amp; enable repository&lt;/li&gt;
+&lt;li&gt;Add a &lt;code&gt;.travis.yaml&lt;/code&gt; file in root of repository then push&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id="grunt"&gt;Grunt&lt;/h1&gt;
+
+&lt;p&gt;The JavaScript Task Runner, Grunt and Grunt plugins are installed and managed via npm, the Node.js package manager.&lt;/p&gt;
+
+&lt;h2 id="gruntcli"&gt;Grunt CLI&lt;/h2&gt;
+
+&lt;p&gt;The job of the Grunt CLI is simple: run the version of Grunt which has been installed next to a Gruntfile. This allows multiple versions of Grunt to be installed on the same machine simultaneously.&lt;/p&gt;
+
+&lt;h3 id="preparingtheproject"&gt;Preparing the Project&lt;/h3&gt;
+
+&lt;p&gt;A typical setup will involve adding two files to your project: &lt;code&gt;package.json&lt;/code&gt; and the &lt;code&gt;Gruntfile&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;package.json&lt;/strong&gt;: This file is used by npm to store metadata for projects published as npm modules. You will list grunt and the Grunt plugins your project needs as devDependencies in this file.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Gruntfile&lt;/strong&gt;: This file is named Gruntfile.js and is used to configure or define tasks and load Grunt plugins.&lt;/p&gt;
+
+&lt;h2 id="thegruntfile"&gt;The Gruntfile&lt;/h2&gt;
+
+&lt;p&gt;A &lt;code&gt;Gruntfile&lt;/code&gt; is comprised of the following parts:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The "wrapper" function&lt;/li&gt;
+&lt;li&gt;Project and task configuration&lt;/li&gt;
+&lt;li&gt;Loading Grunt plugins and tasks&lt;/li&gt;
+&lt;li&gt;Custom tasks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;// wrapper function
+module.exports = function(grunt) {
+
+  // Project configuration.
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    uglify: {
+      options: {
+        banner: '/*! &amp;lt;%= pkg.name %&amp;gt; &amp;lt;%= grunt.template.today("yyyy-mm-dd") %&amp;gt; */\n'
+      },
+      build: {
+        src: 'src/&amp;lt;%= pkg.name %&amp;gt;.js',
+        dest: 'build/&amp;lt;%= pkg.name %&amp;gt;.min.js'
+      }
+    }
+  });
+
+  // Load the plugin that provides the "uglify" task.
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+
+  // Default task(s).
+  grunt.registerTask('default', ['uglify']);
+
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What you think about the posts let me know in comments below !&lt;/p&gt;</content:encoded></item><item><title>ECMAScript 6 part - 2</title><description>&lt;p&gt;ES6 is a significant update to the language, and the first update to the language since ES5 was standardized in 2009. Implementation of these features in major JavaScript engines is underway now.&lt;/p&gt;
+
+&lt;h3 id="extendedparameterhandling"&gt;Extended Parameter Handling&lt;/h3&gt;
+
+&lt;h5 id="defaultparameters"&gt;Default Parameters&lt;/h5&gt;
+
+&lt;p&gt;Most Programming Languages already have default parameters  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;// ECMAScript 6
+function f (x, y&lt;/code&gt;&lt;/pre&gt;</description><link>https://ghost-nithmanoj.c9users.io/ecmascript-6-part-2/</link><guid isPermaLink="false">d50115b9-2251-4b29-966c-c2e432f698ef</guid><category>ES6</category><category>JavaScript</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Wed, 04 Jan 2017 04:00:18 GMT</pubDate><content:encoded>&lt;p&gt;ES6 is a significant update to the language, and the first update to the language since ES5 was standardized in 2009. Implementation of these features in major JavaScript engines is underway now.&lt;/p&gt;
+
+&lt;h3 id="extendedparameterhandling"&gt;Extended Parameter Handling&lt;/h3&gt;
+
+&lt;h5 id="defaultparameters"&gt;Default Parameters&lt;/h5&gt;
+
+&lt;p&gt;Most Programming Languages already have default parameters  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;// ECMAScript 6
+function f (x, y = 7, z = 42) {  
+    return x + y + z
+}
+f(1) === 50
+
+// ECMAScript 5
+function f (x, y, z) {  
+    if (y === undefined)
+        y = 7;
+    if (z === undefined)
+        z = 42;
+    return x + y + z;
+};
+f(1) === 50;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id="extendedparameterhandling"&gt;Extended Parameter Handling&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Rest Parameter&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;// Before es6
+function f (x, y, ...a) {  
+    return (x + y) * a.length
+}
+f(1, 2, "hello", true, 7) === 9
+
+// After es6
+function f (x, y) {  
+    var a = Array.prototype.slice.call(arguments, 2);
+    return (x + y) * a.length;
+};
+f(1, 2, "hello", true, 7) === 9;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Spread Parameter&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;// ECMAScript 6
+var params = [ "hello", true, 7 ]  
+var other = [ 1, 2, ...params ] // [ 1, 2, "hello", true, 7 ]  
+f(1, 2, ...params) === 9
+
+var str = "foo"  
+var chars = [ ...str ] // [ "f", "o", "o" ]
+
+// ECMAScript 5
+var params = [ "hello", true, 7 ];  
+var other = [ 1, 2 ].concat(params); // [ 1, 2, "hello", true, 7 ]  
+f.apply(undefined, [ 1, 2 ].concat(params)) === 9;
+
+var str = "foo";  
+var chars = str.split(""); // [ "f", "o", "o" ]  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What do you think about post? Let me know through comments below!&lt;/p&gt;</content:encoded></item><item><title>ECMAScript 6 part - 1</title><description>ES6. ECMAScript 6 — New Features: Overview &amp; Comparison. See how cleaner and more concise your JavaScript code can look and start coding in ES6 now !!</description><link>https://ghost-nithmanoj.c9users.io/ecmascript-6-part-1/</link><guid isPermaLink="false">3f2f4afe-145b-4f0c-aeea-1aadd6d68fc0</guid><category>ES6</category><category>JavaScript</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Wed, 28 Dec 2016 04:02:32 GMT</pubDate><content:encoded>&lt;p&gt;ES6 is a significant update to the language, and the first update to the language since ES5 was standardized in 2009. Implementation of these features in major JavaScript engines is underway now. &lt;/p&gt;
+
+&lt;h4 id="constants"&gt;Constants&lt;/h4&gt;
+
+&lt;p&gt;Support for constants (also known as "immutable variables"), i.e., variables which cannot be re-assigned new content.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;const PI = 3.141593  
+PI &amp;gt; 3.0  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;  &lt;/p&gt;
+
+&lt;h4 id="scoping"&gt;Scoping&lt;/h4&gt;
+
+&lt;p&gt;Declaration declared through &lt;mark&gt;var&lt;/mark&gt; are hoisted and function scoped. Variables declared through either &lt;mark&gt;let&lt;/mark&gt; or &lt;mark&gt;const&lt;/mark&gt; are block-scoped and not available in the temporal dead-zone.&lt;/p&gt;
+
+&lt;h5 id="blockedscopevariables"&gt;Blocked Scope Variables&lt;/h5&gt;
+
+&lt;p&gt;Block-scoped variables (and constants) that should be available in blocked scope (Curly braces) should be declared using &lt;code&gt;let&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;for (let i = 0; i &amp;lt; a.length; i++) {  
+    let x = a[i]
+    …
+}
+for (let i = 0; i &amp;lt; b.length; i++) {  
+    let y = b[i]
+    …
+}
+
+let callbacks = []  
+for (let i = 0; i &amp;lt;= 2; i++) {  
+    callbacks[i] = function () { return i * 2 }
+}
+callbacks[0]() === 0  
+callbacks[1]() === 2  
+callbacks[2]() === 4  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;  &lt;/p&gt;
+
+&lt;h5 id="blockscopedfunctions"&gt;Block Scoped Functions&lt;/h5&gt;
+
+&lt;p&gt;This are clear by example&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;{
+    function foo () { return 1 }
+    foo() === 1
+    {
+        function foo () { return 2 }
+        foo() === 2
+    }
+    foo() === 1
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;  &lt;/p&gt;
+
+&lt;h4 id="arrowfunctions"&gt;Arrow Functions&lt;/h4&gt;
+
+&lt;h5 id="expressionbodies"&gt;Expression Bodies&lt;/h5&gt;
+
+&lt;p&gt;Old Junk looks like this  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;odds  = evens.map(function (v) { return v + 1; });  
+pairs = evens.map(function (v) { return { even: v, odd: v + 1 }; });  
+nums  = evens.map(function (v, i) { return v + i; });  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;New sexy expressive closure syntax  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;odds = evens.map(v =&amp;gt; v + 1);  
+pairs = evens.map(v =&amp;gt; even: v, odd: v + 1);  
+nums = evens.map( (v, i) =&amp;gt; v + i);  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;  &lt;/p&gt;
+
+&lt;h5 id="statementbodies"&gt;Statement Bodies&lt;/h5&gt;
+
+&lt;p&gt;Old junk example  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;nums.forEach(function (v) {  
+   if (v % 5 === 0)
+       fives.push(v);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;New expressive closure syntax&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;nums.forEach( v =&amp;gt; {  
+   if (v % 5 === 0)
+      fives.push(v);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;  &lt;/p&gt;
+
+&lt;h5 id="lexicalthis"&gt;Lexical this&lt;/h5&gt;
+
+&lt;p&gt;Old Junk  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;var self = this;  
+this.nums.forEach(function (v) {  
+    if (v % 5 === 0)
+        self.fives.push(v);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Stylish ES6  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;this.nums.forEach((v) =&amp;gt; {  
+    if (v % 5 === 0)
+        this.fives.push(v)
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What do you think about post? Let me know through comments below!&lt;/p&gt;</content:encoded></item><item><title>Winuall Intern part 2</title><description>&lt;p&gt;I'll discuss part of my work I am serving as Backend Web Developer. In last post I discussed some of the common techniques that I became familiar with backend designing. Winuall is designing an e-commerce platform with laravel as backend and Angular 2 as front end. I happen to build&lt;/p&gt;</description><link>https://ghost-nithmanoj.c9users.io/winuall-intern-part-2/</link><guid isPermaLink="false">eabaca15-d488-45a2-8eb2-487a284ff99e</guid><category>winuall</category><category>intern</category><dc:creator>Manoj Kumar</dc:creator><pubDate>Tue, 27 Dec 2016 06:10:58 GMT</pubDate><content:encoded>&lt;p&gt;I'll discuss part of my work I am serving as Backend Web Developer. In last post I discussed some of the common techniques that I became familiar with backend designing. Winuall is designing an e-commerce platform with laravel as backend and Angular 2 as front end. I happen to build for them &lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Price model&lt;/li&gt;
