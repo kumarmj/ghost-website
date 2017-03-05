@@ -1,19 +1,18 @@
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 
     <title>ECMAScript 6 part - 2</title>
     <meta name="description" content="">
 
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="shortcut icon" href="../assets/favicon2.ico?v=db8f7f9c95">
-
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=db8f7f9c95">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=db8f7f9c95"> 
+    <link rel="shortcut icon" href="https://ghost-nithmanoj.c9users.io/assets/images/favicon.ico">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css?v=f571d27f18">
+    <link rel="stylesheet" href="../assets/css/screen.css?v=f571d27f18">
 
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -30,6 +29,7 @@
     <meta property="article:tag" content="JavaScript">
     
     <meta property="article:publisher" content="https://www.facebook.com/owsmmj">
+    <meta property="article:author" content="https://www.facebook.com/owsmmj">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="ECMAScript 6 part - 2">
     <meta name="twitter:description" content="ES6 is a significant update to the language, and the first update to the language since ES5 was standardized in 2009. Implementation of these features in major JavaScript engines is underway now. Extended Parameter Handling Default Parameters Most Programming Languages already have default parameters   // ECMAScript 6 function f (x, y">
@@ -39,6 +39,7 @@
     <meta name="twitter:label2" content="Filed under">
     <meta name="twitter:data2" content="ES6, JavaScript">
     <meta name="twitter:site" content="@owsmmj">
+    <meta name="twitter:creator" content="@owsmmj">
     
     <script type="application/ld+json">
 {
@@ -47,7 +48,7 @@
     "publisher": {
         "@type": "Organization",
         "name": "Manoj Kumar",
-        "logo": "https://ghost-nithmanoj.c9users.io/content/images/2016/10/nmjbot-min-1.jpg"
+        "logo": "https://img.clipartfest.com/1f64ef12e2617c18b6d0e4995da7d7c5_coffee-cup-clip-art-coffee-cup-clipart-png_298-258.png"
     },
     "author": {
         "@type": "Person",
@@ -59,7 +60,12 @@
             "height": 250
         },
         "url": "https://ghost-nithmanoj.c9users.io/author/manoj/",
-        "sameAs": []
+        "sameAs": [
+            "http://www.kumarmj.me",
+            "https://www.facebook.com/owsmmj",
+            "https://twitter.com/owsmmj"
+        ],
+        "description": "I am student interested in web tooling, JavaScript and Python"
     },
     "headline": "ECMAScript 6 part - 2",
     "url": "https://ghost-nithmanoj.c9users.io/ecmascript-6-part-2/",
@@ -76,47 +82,45 @@
 
     <meta name="generator" content="Ghost 0.11">
     <link rel="alternate" type="application/rss+xml" title="Manoj Kumar" href="../rss/index.html">
-</head>
-<body class="post-template tag-es6 tag-javascript nav-closed">
+  </head>
+  <body class="post-template tag-es6 tag-javascript">
 
-    <div class="nav">
-    <h3 class="nav-title">Menu</h3>
-    <a href="index.html#" class="nav-close">
-        <span class="hidden">Close</span>
-    </a>
-    <ul>
-            <li class="nav-home" role="presentation"><a href="../">Home</a></li>
-            <li class="nav-nodejs" role="presentation"><a href="../tag/nodejs/">NodeJS</a></li>
-    </ul>
-        <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
-</div>
-<span class="nav-cover"></span>
+    
 
-
-    <div class="site-wrapper">
-
-        
-
-
-<header class="main-header post-head no-cover">
-    <nav class="main-nav  clearfix">
-        <a class="blog-logo" href="../"><img src="../content/images/2016/10/nmjbot-min-1.jpg" alt="Manoj Kumar"></a>
-            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
-    </nav>
+<header class="masthead" style="background-image: url(http://germanencinas.com/marceline/content/images/2016/01/blog.jpg)">
+    <div class="header-wrapper">
+	    <figure class="logo">
+			<a href="../"><img src="https://img.clipartfest.com/1f64ef12e2617c18b6d0e4995da7d7c5_coffee-cup-clip-art-coffee-cup-clipart-png_298-258.png" alt="Manoj Kumar"></a>
+		</figure>
+	    <div class="title">
+	    	<a href="../">
+	        	<h1>Manoj Kumar</h1>
+	        </a>
+	      	<p>Fun Profit &amp; Web</p>
+	      	<div class="line"></div>
+	    </div>
+	    <div class="bottom">
+			<ul class="menu">
+				<li><a href="https://www.twitter.com/owsmmj" target="_blank"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://www.github.com/kumarmj" target="_blank"><i class="fa fa-github"></i></a></li>
+				<li><a href="https://www.linkedin.com/in/owsmmj" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+			</ul>
+	    </div>
+  	</div>
 </header>
 
-<main class="content" role="main">
-    <article class="post tag-es6 tag-javascript">
-
-        <header class="post-header">
-            <h1 class="post-title">ECMAScript 6 part - 2</h1>
-            <section class="post-meta">
-                <time class="post-date" datetime="2017-01-04">04 January 2017</time>  on <a href="../tag/es6/">ES6</a>, <a href="../tag/javascript/">JavaScript</a>
-            </section>
+<section class="container">
+  
+	<article class="post tag-es6 tag-javascript single">
+        <header class="header-post">
+        	<span class="meta-post">
+            	<time datetime="04-01-2017">04 Jan 2017</time>
+        	</span>
+          	<h2 class="title-post">ECMAScript 6 part - 2</h2>
         </header>
 
-        <section class="post-content">
-            <p>ES6 is a significant update to the language, and the first update to the language since ES5 was standardized in 2009. Implementation of these features in major JavaScript engines is underway now.</p>
+        <section class="content-post">
+			<p>ES6 is a significant update to the language, and the first update to the language since ES5 was standardized in 2009. Implementation of these features in major JavaScript engines is underway now.</p>
 
 <h3 id="extendedparameterhandling">Extended Parameter Handling</h3>
 
@@ -179,80 +183,64 @@ var chars = str.split(""); // [ "f", "o", "o" ]
 </code></pre>
 
 <p>What do you think about post? Let me know through comments below!</p>
-        </section>
+		</section>
 
-        <footer class="post-footer">
+		<footer class="footer-post">
 
+			<section class="author-post">
+					<figure class="avatar">
+						<img src="https://www.gravatar.com/avatar/4488b14e87a39b3e2f09d00070d68f96?s=250&amp;d=mm&amp;r=x" alt="Manoj Kumar">
+					</figure>
 
-            <figure class="author-image">
-                <a class="img" href="../author/manoj/" style="background-image: url(https://www.gravatar.com/avatar/4488b14e87a39b3e2f09d00070d68f96?s&amp;)"><span class="hidden">Manoj Kumar's Picture</span></a>
-            </figure>
+				<div class="bio">
+					<span>Autor</span>
+					<h4 class="author-name">
+						<a href="../author/manoj/">Manoj Kumar</a>
+					</h4>
+						<p>I am student interested in web tooling, JavaScript and Python</p>
+				</div>
+			</section>
 
-            <section class="author">
-                <h4><a href="../author/manoj/">Manoj Kumar</a></h4>
+			<section class="share">
+				<h4>Share post</h4>
+				<a href="https://twitter.com/share?text=ECMAScript%206%20part%20-%202&amp;url=https://ghost-nithmanoj.c9users.io/ecmascript-6-part-2/" class="fa fa-twitter" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+					<span class="hidden">Twitter</span>
+				</a>
 
-                    <p>Read <a href="../author/manoj/">more posts</a> by this author.</p>
-                <div class="author-meta">
-                    
-                    
-                </div>
-            </section>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=https://ghost-nithmanoj.c9users.io/ecmascript-6-part-2/" class="fa fa-facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+					<span class="hidden">Facebook</span>
+				</a>
 
+				<a href="https://plus.google.com/share?url=https://ghost-nithmanoj.c9users.io/ecmascript-6-part-2/" class="fa fa-google-plus" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+					<span class="hidden">Google+</span>
+				</a>
+			</section>
+		</footer>
 
-            <section class="share">
-                <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=ECMAScript%206%20part%20-%202&amp;url=https://ghost-nithmanoj.c9users.io/ecmascript-6-part-2/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <span class="hidden">Twitter</span>
-                </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://ghost-nithmanoj.c9users.io/ecmascript-6-part-2/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                    <span class="hidden">Facebook</span>
-                </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://ghost-nithmanoj.c9users.io/ecmascript-6-part-2/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                    <span class="hidden">Google+</span>
-                </a>
-            </section>
+		<section class="comments-post">
+			<!-- Disqus Comments -->
+			
+		</section>
 
-            <div id="disqus_thread"></div>
-<script>
+  	</article>
+</section>
 
-/**
- *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
- *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
-/*
-var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = '//kumarmj-me.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                                    
-
-        </footer>
-
-    </article>
-</main>
-
-
-
-
-
-        <footer class="site-footer clearfix">
-            <section class="copyright"><a href="../">Manoj Kumar</a> © 2017</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-        </footer>
-
-    </div>
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=db8f7f9c95"></script>
-    <script type="text/javascript" src="../assets/js/index.js?v=db8f7f9c95"></script>
-    <script type="text/javascript" src="../assets/js/prism.js?v=db8f7f9c95"></script>
-</body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script> 
+      var max_pages = parseInt('');
+    </script>
+    <script src="../assets/js/main.js?v=f571d27f18"></script>
+    <script>
+    //Google Analytics
+
+    //Code Highlighter
+      $(document).ready(function() {
+        $('pre code').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+      });
+    </script>
+  </body>
