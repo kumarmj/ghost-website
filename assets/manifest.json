@@ -1,0 +1,35 @@
+{
+  "manifest_version": 1,
+  "name": "MJ WeBlog",
+  "short_name": "MJ WeBlog",
+  "icons": [{
+    "src": "./nmjbot-min.jpg",
+    "sizes": "48x48",
+    "type": "image/jpg"
+  }, {
+    "src": "./nmjbot-min.jpg",
+    "sizes": "72x72",
+    "type": "image/jpg"
+  }, {
+    "src": "./nmjbot-min.jpg",
+    "sizes": "96x96",
+    "type": "image/jpg"
+  }, {
+    "src": "./nmjbot-min.jpg",
+    "sizes": "144x144",
+    "type": "image/jpg"
+  }, {
+    "src": "./nmjbot-min.jpg",
+    "sizes": "168x168",
+    "type": "image/jpg"
+  }, {
+    "src": "./nmjbot-min.jpg",
+    "sizes": "192x192",
+    "type": "image/jpg"
+  }],
+  "start_url": "/",
+  
+  "display": "standalone",
+  "background_color": "#F8A82D",
+  "theme_color": "#F8A82D"
+}
